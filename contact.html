@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <title>contact</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            height: 100vh; /* ให้เต็มจอ */
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background: #696969;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+            padding: 20px;
+            z-index: 999;
+        }
+        .navbar a {
+            background: #ffffff;
+            padding: 8px 10px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 10px;
+            color: #333;
+        }
+        .navbar a:hover {
+            background: #d3d3d3;
+        }
+        main {
+            flex: 1; /* กินพื้นที่เหลือ */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* จัดให้อยู่กลางจอ */
+        }
+        .contact-box {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            font-size: 14px;
+        }
+        textarea {
+            min-height: 120px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+        .error-message {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="home.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="best selling products.html">สินค้าขายดี</a>
+        <a href="promotion.html">โปรโมชั่น</a>
+        <a href="contact.html">ติดต่อเรา</a>
+    </div>
+
+
+    <main>
+        <div class="contact-box">
+            <h1>ติดต่อเรา</h1>
+            <form id="contact-form">
+                <label for="name">ชื่อ-นามสกุล</label>
+                <input type="text" id="name" name="name" placeholder="กรอกชื่อของคุณ" required>
+
+                <label for="email">อีเมล</label>
+                <input type="email" id="email" name="email" placeholder="กรอกอีเมลของคุณ" required>
+
+                <label for="phone">เบอร์โทรศัพท์</label>
+                <input type="text" id="phone" name="phone" placeholder="กรอกเบอร์โทรศัพท์" required pattern="[0-9]{9,10}" title="กรุณากรอกเบอร์โทรศัพท์ 9-10 ตัวเลข">
+
+                <label for="message">ข้อความ</label>
+                <textarea id="message" name="message" placeholder="เขียนข้อความที่ต้องการติดต่อ" required></textarea>
+
+                <button type="submit">ส่งข้อความ</button>
+            </form>
+
+            <div class="success-message" id="success-message">ส่งข้อความสำเร็จ! เราจะติดต่อกลับโดยเร็วที่สุด</div>
+            <div class="error-message" id="error-message">กรุณากรอกข้อมูลให้ถูกต้องครบถ้วน</div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('error-message').style.display = 'none';
+
+            const form = event.target;
+            if (!form.checkValidity()) {
+                document.getElementById('error-message').style.display = 'block';
+                return;
+            }
+
+            document.getElementById('success-message').style.display = 'block';
+            form.reset();
+        });
+    </script>
+</body>
+</html>

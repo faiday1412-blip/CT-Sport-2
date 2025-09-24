@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #696969;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+        }
+
+        .navbar a {
+            background: #FFFFFF;
+            padding: 8px 12px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 10px;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: #D3D3D3;
+        }
+
+        /* Hero Image */
+        .hero-img {
+            width: 100%;
+            margin-top: 90px; /* ป้องกันชน navbar */
+            display: block;
+        }
+
+        /* Section Title */
+        .section-title {
+            background: #D3D3D3;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Car Table */
+        .car-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .car-table td {
+            border: 3px solid #333;
+            padding: 10px;
+        }
+
+        .car-table img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .car-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="home.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="best selling products.html">สินค้าขายดี</a>
+        <a href="promotion.html">โปรโมชั่น</a>
+        <a href="contact.html">ติดต่อเรา</a>
+    </div>
+
+    <!-- Hero Image -->
+    <img src="img/100.jpg" alt="Car Banner" class="hero-img">
+
+    <!-- Section Title -->
+    <div class="section-title">
+        ตัวอย่างรถ
+    </div>
+
+    <!-- Car Table -->
+    <table class="car-table">
+        <tr>
+            <td>
+                <img src="img/300.png" alt="Nissan Navara">
+                <div class="car-name">Nissan Navara</div>
+            </td>
+            <td>
+                <img src="img/400.png" alt="BMW">
+                <div class="car-name">BMW</div>
+            </td>
+            <td>
+                <img src="img/500.png" alt="Toyota Camry">
+                <div class="car-name">Toyota Camry</div>
+            </td>
+            <td>
+                <img src="img/600.png" alt="Toyota Fortuner">
+                <div class="car-name">Toyota Fortuner</div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

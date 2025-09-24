@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรโมชั่นพิเศษสำหรับรถยนต์</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #696969;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+        }
+
+        .navbar a {
+            background: #FFFFFF;
+            padding: 8px 10px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 10px;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: #D3D3D3;
+        }
+
+        /* Promo Section */
+        .promo-container {
+            background-color: #ffffff;
+            max-width: 800px;
+            margin: 120px auto 30px; /* ขยับลงมาไม่ให้ชน navbar */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .promo-description {
+            font-size: 20px;
+            text-align: center;
+            margin: 20px 0;
+            color: #7f8c8d;
+        }
+
+        .details {
+            font-size: 18px;
+            color: #34495e;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .offer-price {
+            font-size: 24px;
+            color: #e74c3c;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            padding: 15px;
+            font-size: 20px;
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2ecc71;
+        }
+
+        .hero-img {
+            width: 100%;
+            margin-top: 80px; /* ป้องกันภาพไปซ้อนกับ navbar */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="home.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="best selling products.html">สินค้าขายดี</a>
+        <a href="promotion.html">โปรโมชั่น</a>
+        <a href="contact.html">ติดต่อเรา</a>
+    </div>
+
+    <!-- Hero Image -->
+    <img src="img/200.jpg" alt="Promotion Banner" class="hero-img">
+
+    <!-- Promotion Section -->
+    <div class="promo-container">
+        <h1>โปรโมชั่นพิเศษสำหรับรถยนต์รุ่นใหม่!</h1>
+        <p class="promo-description">
+            อย่าพลาด! ข้อเสนอสุดพิเศษในช่วงนี้ ลดราคาสูงสุดถึง 150,000 บาท!
+        </p>
+
+        <p class="details">
+            🚗 <strong>รุ่น: Toyota Corolla 2025</strong><br>
+            💥 <strong>โปรโมชั่นลดทันทีสูงสุด 150,000 บาท</strong><br>
+            🎁 <strong>ของแถมพิเศษ: ฟรีประกันภัยชั้น 1 + อุปกรณ์ตกแต่งรถมูลค่า 50,000 บาท</strong><br>
+            ⏳ <strong>ระยะเวลาโปรโมชั่น: 1 กันยายน - 30 พฤศจิกายน 2025</strong><br>
+        </p>
+
+        <p class="offer-price">
+            ราคาพิเศษ: 739,000 บาท (จากราคาปกติ 889,000 บาท)
+        </p>
+
+        <a href="tel:+66000000000" class="cta-button">โทรทันที! จองเลยก่อนหมดโปร!</a>
+    </div>
+
+</body>
+</html>
